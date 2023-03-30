@@ -419,9 +419,17 @@ class SummaryDoc(PropertyDoc):
     )
 
     @classmethod
-    def from_docs(cls, material_id: MPID, **docs: Dict[str, Dict]):
-        """Converts a bunch of summary docs into a SummaryDoc"""
-        doc = _copy_from_doc(docs)
+    def from_docs(cls, material_id: MPID, key_map: dict, **docs: Dict[str, Dict]):
+        """Converts a bunch of summary docs into a SummaryDoc
+
+        Args:
+            material_id (MPID): Material ID
+            key_map (dict): Map between HasProps values and the document unique key.
+
+        Returns:
+            SummaryDoc
+        """
+        doc = _copy_from_doc(docs, key_map)
 
         # Reshape document for various sub-sections
         # Electronic Structure + Bandstructure + DOS
@@ -538,29 +546,30 @@ summary_fields: Dict[str, list] = {
 }
 
 
-def _copy_from_doc(doc):
+def _copy_from_doc(doc, key_map):
     """Helper function to copy the list of keys over from amalgamated document"""
     d = {"has_props": []}
     # Complex function to grab the keys and put them in the root doc
     # if the item is a list, it makes one doc per item with those corresponding keys
-    for doc_key in summary_fields:
-        sub_doc = doc.get(doc_key, None)
+    for doc_name in summary_fields:
+        sub_doc = doc.get(doc_name, None)
         if isinstance(sub_doc, list) and len(sub_doc) > 0:
-            d["has_props"].append(doc_key)
-            d[doc_key] = []
+            d["has_props"].append(doc_name)
+
+            d[doc_name] = []
             for sub_item in sub_doc:
                 temp_doc = {
                     copy_key: sub_item[copy_key]
-                    for copy_key in summary_fields[doc_key]
+                    for copy_key in summary_fields[doc_name]
                     if copy_key in sub_item
                 }
-                d[doc_key].append(temp_doc)
+                d[doc_name].append(temp_doc)
         elif isinstance(sub_doc, dict):
-            d["has_props"].append(doc_key)
+            d["has_props"].append(doc_name)
             d.update(
                 {
                     copy_key: sub_doc[copy_key]
-                    for copy_key in summary_fields[doc_key]
+                    for copy_key in summary_fields[doc_name]
                     if copy_key in sub_doc
                 }
             )
