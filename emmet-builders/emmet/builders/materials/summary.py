@@ -15,6 +15,8 @@ class SummaryBuilder(Builder):
         materials,
         thermo,
         xas,
+        chemenv,
+        absorption,
         grain_boundaries,
         electronic_structure,
         magnetism,
@@ -39,6 +41,8 @@ class SummaryBuilder(Builder):
         self.materials = materials
         self.thermo = thermo
         self.xas = xas
+        self.chemenv = chemenv
+        self.absorption = absorption
         self.grain_boundaries = grain_boundaries
         self.electronic_structure = electronic_structure
         self.magnetism = magnetism
@@ -65,6 +69,8 @@ class SummaryBuilder(Builder):
                 materials,
                 thermo,
                 xas,
+                chemenv,
+                absorption,
                 grain_boundaries,
                 electronic_structure,
                 magnetism,
@@ -128,6 +134,12 @@ class SummaryBuilder(Builder):
                 HasProps.xas.value: list(
                     self.xas.query({self.xas.key: {"$in": all_tasks}})
                 ),
+                HasProps.chemenv.value: self.chemenv.query_one(
+                    {self.chemenv.key: entry}
+                ),
+                HasProps.absorption.value: self.absorption.query_one(
+                    {self.absorption.key: entry}
+                ),
                 HasProps.grain_boundaries.value: list(
                     self.grain_boundaries.query({self.grain_boundaries.key: entry})
                 ),
@@ -147,12 +159,11 @@ class SummaryBuilder(Builder):
                     {self.piezoelectric.key: entry}
                 ),
                 HasProps.phonon.value: self.phonon.query_one(
-                    {self.phonon.key: {"$in": all_tasks}}, [self.phonon.key],
+                    {self.phonon.key: {"$in": all_tasks}}, [self.phonon.key]
                 ),
                 HasProps.insertion_electrodes.value: list(
                     self.insertion_electrodes.query(
-                        {"material_ids": entry},
-                        [self.insertion_electrodes.key],
+                        {"material_ids": entry}, [self.insertion_electrodes.key]
                     )
                 ),
                 HasProps.surface_properties.value: self.surfaces.query_one(
@@ -177,9 +188,7 @@ class SummaryBuilder(Builder):
                 ),
             }
 
-            sub_fields = {
-                HasProps.elasticity.value: "elasticity",
-            }
+            sub_fields = {HasProps.elasticity.value: "elasticity"}
 
             for collection, sub_field in sub_fields.items():
                 if data[collection] is not None:
