@@ -14,7 +14,7 @@ cycler==0.11.0
     # via matplotlib
 emmet-core==0.56.1
     # via mp-api
-fonttools==4.40.0
+fonttools==4.43.0
     # via matplotlib
 future==0.18.3
     # via uncertainties
@@ -61,7 +61,7 @@ pandas==2.0.2
     # via
     #   -r python/requirements.txt
     #   pymatgen
-pillow==9.5.0
+pillow==10.3.0
     # via matplotlib
 plotly==5.15.0
     # via pymatgen
@@ -74,7 +74,7 @@ pydantic==1.10.9
     # via
     #   emmet-core
     #   emmet-core (emmet/emmet-core/setup.py)
-pymatgen==2023.5.31
+pymatgen==2024.2.20
     # via
     #   emmet-core
     #   emmet-core (emmet/emmet-core/setup.py)
