@@ -54,7 +54,7 @@ ddtrace==1.15.0
     # via emmet-api (setup.py)
 deprecated==1.2.14
     # via opentelemetry-api
-dnspython==2.3.0
+dnspython==2.6.1
     # via
     #   maggma
     #   pymongo
@@ -80,7 +80,7 @@ gunicorn==20.1.0
     # via emmet-api (setup.py)
 h11==0.14.0
     # via uvicorn-tschaume
-idna==3.4
+idna==3.7
     # via
     #   anyio
     #   requests
@@ -173,7 +173,7 @@ pandas==2.0.2
     #   pymatgen
 paramiko==3.2.0
     # via sshtunnel
-pillow==9.5.0
+pillow==10.3.0
     # via matplotlib
 plotly==5.15.0
     # via pymatgen
@@ -210,7 +210,7 @@ pymatgen-analysis-alloys==0.0.6
     # via emmet-core
 pymatgen-analysis-diffusion==2022.7.21
     # via emmet-core
-pymongo==4.3.3
+pymongo==4.6.3
     # via
     #   maggma
     #   matminer
