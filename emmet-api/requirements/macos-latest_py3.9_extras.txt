@@ -110,7 +110,7 @@ htmlmin2==0.1.13
     # via mkdocs-minify-plugin
 identify==2.5.24
     # via pre-commit
-idna==3.4
+idna==3.7
     # via
     #   anyio
     #   requests
@@ -257,7 +257,7 @@ numpy==1.24.3
     #   spglib
 opentelemetry-api==1.18.0
     # via ddtrace
-orjson==3.9.1
+orjson==3.9.15
     # via maggma
 packaging==23.1
     # via
@@ -274,7 +274,7 @@ pandas==2.0.2
     #   pymatgen
 paramiko==3.2.0
     # via sshtunnel
-pillow==9.5.0
+pillow==10.3.0
     # via matplotlib
 platformdirs==3.5.3
     # via virtualenv
@@ -331,7 +331,7 @@ pymdown-extensions==10.0.1
     # via
     #   mkdocs-material
     #   mkdocstrings
-pymongo==4.3.3
+pymongo==4.6.3
     # via
     #   maggma
     #   matminer
