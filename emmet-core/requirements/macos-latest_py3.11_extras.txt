@@ -55,7 +55,7 @@ cycler==0.11.0
     # via matplotlib
 distlib==0.3.6
     # via virtualenv
-dnspython==2.3.0
+dnspython==2.6.1
     # via
     #   maggma
     #   pymongo
@@ -83,7 +83,7 @@ htmlmin2==0.1.13
     # via mkdocs-minify-plugin
 identify==2.5.24
     # via pre-commit
-idna==3.4
+idna==3.7
     # via
     #   anyio
     #   requests
@@ -292,7 +292,7 @@ pymdown-extensions==10.0.1
     # via
     #   mkdocs-material
     #   mkdocstrings
-pymongo==4.3.3
+pymongo==4.6.3
     # via
     #   maggma
     #   matminer

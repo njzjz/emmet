@@ -38,7 +38,7 @@ cryptography==41.0.1
     # via paramiko
 cycler==0.11.0
     # via matplotlib
-dnspython==2.3.0
+dnspython==2.6.1
     # via
     #   maggma
     #   pymongo
@@ -56,7 +56,7 @@ future==0.18.3
     # via
     #   matminer
     #   uncertainties
-idna==3.4
+idna==3.7
     # via
     #   anyio
     #   requests
@@ -178,7 +178,7 @@ pymatgen-analysis-alloys==0.0.6
     # via emmet-core
 pymatgen-analysis-diffusion==2022.7.21
     # via emmet-core
-pymongo==4.3.3
+pymongo==4.6.3
     # via
     #   maggma
     #   matminer
