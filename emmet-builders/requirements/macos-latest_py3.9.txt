@@ -58,7 +58,7 @@ future==0.18.3
     # via
     #   matminer
     #   uncertainties
-idna==3.4
+idna==3.7
     # via
     #   anyio
     #   requests
@@ -136,7 +136,7 @@ numpy==1.24.3
     #   seekpath
     #   shapely
     #   spglib
-orjson==3.9.1
+orjson==3.9.15
     # via maggma
 packaging==23.1
     # via
@@ -151,7 +151,7 @@ pandas==2.0.2
     #   pymatgen
 paramiko==3.2.0
     # via sshtunnel
-pillow==9.5.0
+pillow==10.3.0
     # via matplotlib
 plotly==5.15.0
     # via pymatgen
@@ -184,7 +184,7 @@ pymatgen-analysis-alloys==0.0.6
     # via emmet-core
 pymatgen-analysis-diffusion==2022.7.21
     # via emmet-core
-pymongo==4.3.3
+pymongo==4.6.3
     # via
     #   maggma
     #   matminer
