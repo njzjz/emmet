@@ -38,7 +38,7 @@ cryptography==41.0.1
     # via paramiko
 cycler==0.11.0
     # via matplotlib
-dnspython==2.3.0
+dnspython==2.6.1
     # via
     #   maggma
     #   pymongo
@@ -164,7 +164,7 @@ pybtex==0.24.0
     #   robocrys
 pycparser==2.21
     # via cffi
-pydantic==1.10.9
+pydantic==1.10.13
     # via
     #   emmet-core
     #   fastapi

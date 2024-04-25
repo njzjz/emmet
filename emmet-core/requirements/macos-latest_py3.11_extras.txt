@@ -55,7 +55,7 @@ cycler==0.11.0
     # via matplotlib
 distlib==0.3.6
     # via virtualenv
-dnspython==2.3.0
+dnspython==2.6.1
     # via
     #   maggma
     #   pymongo
@@ -260,7 +260,7 @@ pycodestyle==2.10.0
     #   flake8
 pycparser==2.21
     # via cffi
-pydantic==1.10.9
+pydantic==1.10.13
     # via
     #   emmet-core
     #   emmet-core (setup.py)
