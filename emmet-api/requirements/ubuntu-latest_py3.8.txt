@@ -54,7 +54,7 @@ ddtrace==1.15.0
     # via emmet-api (setup.py)
 deprecated==1.2.14
     # via opentelemetry-api
-dnspython==2.3.0
+dnspython==2.6.1
     # via
     #   maggma
     #   pymongo
@@ -80,11 +80,11 @@ future==0.18.3
     # via
     #   matminer
     #   uncertainties
-gunicorn==20.1.0
+gunicorn==22.0.0
     # via emmet-api (setup.py)
 h11==0.14.0
     # via uvicorn-tschaume
-idna==3.4
+idna==3.7
     # via
     #   anyio
     #   requests
@@ -202,7 +202,7 @@ pybtex==0.24.0
     #   robocrys
 pycparser==2.21
     # via cffi
-pydantic==1.10.9
+pydantic==1.10.13
     # via
     #   emmet-core
     #   fastapi
