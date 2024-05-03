@@ -102,7 +102,7 @@ ghp-import==2.1.0
     # via mkdocs
 griffe==0.29.0
     # via mkdocstrings-python
-gunicorn==20.1.0
+gunicorn==22.0.0
     # via emmet-api (setup.py)
 h11==0.14.0
     # via uvicorn-tschaume
@@ -294,7 +294,7 @@ pycodestyle==2.10.0
     #   flake8
 pycparser==2.21
     # via cffi
-pydantic==1.10.9
+pydantic==1.10.13
     # via
     #   emmet-core
     #   fastapi
@@ -434,7 +434,7 @@ tomli==2.0.1
     #   pytest
 tornado==6.3.2
     # via livereload
-tqdm==4.65.0
+tqdm==4.66.3
     # via
     #   maggma
     #   matminer
