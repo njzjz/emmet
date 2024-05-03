@@ -289,7 +289,7 @@ pycodestyle==2.10.0
     #   flake8
 pycparser==2.21
     # via cffi
-pydantic==1.10.9
+pydantic==1.10.13
     # via
     #   emmet-core
     #   fastapi
@@ -424,7 +424,7 @@ threadpoolctl==3.1.0
     # via scikit-learn
 tornado==6.3.2
     # via livereload
-tqdm==4.65.0
+tqdm==4.66.3
     # via
     #   maggma
     #   matminer

@@ -168,7 +168,7 @@ pybtex==0.24.0
     #   robocrys
 pycparser==2.21
     # via cffi
-pydantic==1.10.9
+pydantic==1.10.13
     # via
     #   emmet-core
     #   fastapi
@@ -267,7 +267,7 @@ tenacity==8.2.2
     # via plotly
 threadpoolctl==3.1.0
     # via scikit-learn
-tqdm==4.65.0
+tqdm==4.66.3
     # via
     #   maggma
     #   matminer
