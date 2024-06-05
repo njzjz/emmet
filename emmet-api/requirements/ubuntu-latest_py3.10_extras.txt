@@ -324,7 +324,7 @@ pymdown-extensions==10.0.1
     # via
     #   mkdocs-material
     #   mkdocstrings
-pymongo==4.3.3
+pymongo==4.6.3
     # via
     #   maggma
     #   matminer
@@ -362,7 +362,7 @@ pyyaml-env-tag==0.1
     # via mkdocs
 pyzmq==24.0.1
     # via maggma
-requests==2.31.0
+requests==2.32.2
     # via
     #   matminer
     #   mongogrant
